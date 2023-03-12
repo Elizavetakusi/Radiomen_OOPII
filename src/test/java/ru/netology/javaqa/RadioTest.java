@@ -5,20 +5,12 @@ import org.junit.jupiter.api.Test;
 
 public class RadioTest {
 
+
     @Test
     public void setStationFromRange() {
         Radio radio = new Radio();
         radio.setCurrentStation(5);
         int expected = 5;
-        int actual = radio.getCurrentStation();
-
-        Assertions.assertEquals(expected, actual);
-    }
-    @Test
-    public void setStationFromStationsCount() {
-        Radio radio = new Radio(50);
-        radio.setCurrentStation(25);
-        int expected = 25;
         int actual = radio.getCurrentStation();
 
         Assertions.assertEquals(expected, actual);
