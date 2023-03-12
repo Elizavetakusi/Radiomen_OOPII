@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class RadioTest {
 
+
     @Test
     public void setStationFromRange() {
         Radio radio = new Radio();
@@ -101,7 +102,7 @@ public class RadioTest {
     @Test
     public void setTheVolumeAboveTheMaxValue() {
         Radio radio = new Radio();
-        radio.setCurrentVolume(50);
+        radio.setCurrentVolume(110);
         int expected = 0;
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
@@ -176,10 +177,10 @@ public class RadioTest {
     @Test
     public void increaseTheVolumeWhenMaximumPossibleValue() {
         Radio radio = new Radio();
-        radio.setCurrentVolume(10);
+        radio.setCurrentVolume(100);
 
         radio.increaseVolume();
-        int expected = 10;
+        int expected = 100;
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
